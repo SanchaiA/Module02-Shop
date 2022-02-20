@@ -15,7 +15,7 @@ body {
 }
 .header {
   max-width: 1440px;
-  margin: 0 auto 6.5rem;
+  margin: 0 auto 6.8rem;
   padding: 4rem 15px 0 15px;
   display: flex;
   justify-content: space-between;
@@ -26,6 +26,7 @@ body {
     margin: 0;
     padding-left: 0;
     gap: 4.8rem; /*48px*/
+    margin-left: 3.8rem;
   }
   &__link {
     color: $green;
@@ -37,11 +38,13 @@ body {
   &__tel {
     color: $green;
     font-weight: 500;
+    line-height: 1.2;
     text-decoration: none;
+    letter-spacing: 0.1rem;
     &:hover {
       color: $orange;
     }
-    margin-left: 100px;
+    margin-left: 16.5rem;
   }
   &__cart {
     display: block;
@@ -86,13 +89,15 @@ body {
   background-image: url(../images/main.png);
   background-size: cover;
   background-position: center;
+  position: relative;
+  padding-bottom: 187px;
   &__item {
     margin-left: 12rem;
     max-width: 378px;
     margin-top: 6rem;
   }
   &__link {
-    margin-top: 6rem;
+    margin-top: 5.5rem;
   }
   &__flex {
     display: flex;
@@ -102,7 +107,7 @@ body {
   }
   &__cover {
     flex-basis: 763px;
-    height: 763px;
+    height: 759px;
     border: 1px solid rgba($green, 0.4);
     border-radius: 100%;
     display: flex;
@@ -110,10 +115,12 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    top: -19px;
+    left: 2px;
   }
   &__line {
     width: 658px;
-    height: 658px;
+    height: 654px;
     border: 1px solid rgba($green, 0.4);
     border-radius: 100%;
     display: flex;
@@ -125,38 +132,85 @@ body {
     width: 92%;
   }
   &__btn {
+    background-color: transparent;
     border: none;
-    background-color: $green;
     padding: 0;
-    width: 11px;
-    height: 11px;
-    box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
-    border-radius: 100%;
     position: absolute;
-    &:hover {
+    color: $green;
+    font-weight: 500;
+    text-align: left;
+    &::before {
+      content: "";
+      background-color: $green;
+      width: 11px;
+      height: 11px;
+      box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+      border-radius: 100%;
+      position: absolute;
+    }
+    &:hover::before {
       background-color: $orange;
+      box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
     }
     &_01 {
-      top: 65px;
-      left: 152px;
-      &:hover {
-        box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+      top: 46px;
+      left: 66px;
+      &::before {
+        top: 21px;
+        left: 85px;
       }
     }
     &_02 {
-      top: 212px;
-      right: 90px;
-      &:hover {
-        box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+      top: 195px;
+      right: 3px;
+      &::before {
+        top: 15px;
+        right: 87px;
       }
     }
     &_03 {
-      bottom: 9px;
-      right: 270px;
-      &:hover {
-        box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+      bottom: -44px;
+      right: 245px;
+      &::before {
+        bottom: 52px;
+        right: 30px;
       }
     }
+  }
+  &__food {
+    display: block;
+    color: rgba($green, 0.8);
+    font-weight: 400;
+  }
+  &__tomato {
+    position: absolute;
+    bottom: 13.6rem;
+    right: 6rem;
+    width: 11rem;
+  }
+  &__avocado {
+    position: absolute;
+    top: 5rem;
+    right: -6.5rem;
+    width: 17.8rem;
+  }
+  &__cucumber {
+    position: absolute;
+    top: 0rem;
+    left: 63rem;
+    width: 8.5rem;
+  }
+  &__pepper {
+    position: absolute;
+    top: 40rem;
+    left: -2rem;
+    width: 8.6rem;
+  }
+  &__peas {
+    position: absolute;
+    bottom: 18.3rem;
+    left: -2rem;
+    width: 6.6rem;
   }
 }
 .title {
@@ -177,7 +231,7 @@ body {
 .description {
   margin: 0;
   &_size-s {
-    font-style: 1.8rem;
+    font-size: 1.8rem;
     line-height: 1.5;
   }
 }
@@ -185,7 +239,7 @@ body {
   color: white;
   text-transform: uppercase;
   line-height: 1.2;
-  padding: 2.3rem 5.2rem;
+  padding: 2.3rem 5.5rem;
   background-color: $orange;
   box-shadow: 0px 1rem 1.1rem 0.2rem rgba(207, 92, 13, 0.2);
   text-decoration: none;
