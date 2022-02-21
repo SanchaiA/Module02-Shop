@@ -15,7 +15,7 @@ body {
 }
 .header {
   max-width: 1440px;
-  margin: 0 auto 6.8rem;
+  margin: 0 auto 5rem;
   padding: 4rem 15px 0 15px;
   display: flex;
   justify-content: space-between;
@@ -75,7 +75,7 @@ body {
   display: block;
   background-image: url(../images/logo.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 12.3rem;
   height: 3.2rem;
 }
@@ -91,6 +91,7 @@ body {
   background-position: center;
   position: relative;
   padding-bottom: 187px;
+  z-index: 0;
   &__item {
     margin-left: 12rem;
     max-width: 378px;
@@ -106,8 +107,8 @@ body {
     gap: 30px;
   }
   &__cover {
-    flex-basis: 763px;
-    height: 759px;
+    flex-basis: 758px;
+    height: 758px;
     border: 1px solid rgba($green, 0.4);
     border-radius: 100%;
     display: flex;
@@ -115,8 +116,6 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -19px;
-    left: 2px;
   }
   &__line {
     width: 658px;
@@ -130,6 +129,11 @@ body {
   }
   &__img {
     width: 92%;
+    box-shadow: 47px 90px 90px -65px rgba($green, 0.8);
+    border-radius: 100%;
+  }
+  &__text {
+    padding-top: 3.6rem;
   }
   &__btn {
     background-color: transparent;
@@ -182,36 +186,42 @@ body {
     display: block;
     color: rgba($green, 0.8);
     font-weight: 400;
+    z-index: -1;
   }
   &__tomato {
     position: absolute;
-    bottom: 13.6rem;
+    bottom: 11.6rem;
     right: 6rem;
     width: 11rem;
+    z-index: -1;
   }
   &__avocado {
     position: absolute;
-    top: 5rem;
-    right: -6.5rem;
+    top: 48px;
+    right: -63px;
     width: 17.8rem;
+    z-index: -1;
   }
   &__cucumber {
     position: absolute;
     top: 0rem;
     left: 63rem;
     width: 8.5rem;
+    z-index: -1;
   }
   &__pepper {
     position: absolute;
     top: 40rem;
     left: -2rem;
     width: 8.6rem;
+    z-index: -1;
   }
   &__peas {
     position: absolute;
     bottom: 18.3rem;
     left: -2rem;
     width: 6.6rem;
+    z-index: -1;
   }
 }
 .title {
@@ -231,19 +241,20 @@ body {
 }
 .description {
   margin: 0;
+  line-height: 1.5;
   &_size-s {
     font-size: 1.8rem;
-    line-height: 1.5;
   }
 }
 .link {
   color: white;
   text-transform: uppercase;
   line-height: 1.2;
-  padding: 2.3rem 5.5rem;
+  padding: 2.3rem 4.3rem;
   background-color: $orange;
   box-shadow: 0px 1rem 1.1rem 0.2rem rgba(207, 92, 13, 0.2);
   text-decoration: none;
+  letter-spacing: 0.13rem;
   border-radius: 3.8rem;
   display: inline-block;
 }
