@@ -76,7 +76,7 @@ body {
   background-image: url(../images/logo.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 12.3rem;
+  width: 12rem;
   height: 3.2rem;
 }
 .container {
@@ -89,6 +89,7 @@ body {
   background-image: url(../images/main.png);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   padding-bottom: 187px;
   z-index: 0;
@@ -107,8 +108,8 @@ body {
     gap: 30px;
   }
   &__cover {
-    flex-basis: 758px;
-    height: 758px;
+    flex-basis: 759px;
+    height: 759px;
     border: 1px solid rgba($green, 0.4);
     border-radius: 100%;
     display: flex;
@@ -158,8 +159,8 @@ body {
       box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
     }
     &_01 {
-      top: 41px;
-      left: 66px;
+      top: 42px;
+      left: 62px;
       &::before {
         top: 26px;
         left: 85px;
@@ -197,30 +198,44 @@ body {
   }
   &__avocado {
     position: absolute;
-    top: 48px;
-    right: -63px;
+    top: 46px;
+    right: 0px;
     width: 17.8rem;
     z-index: -1;
   }
   &__cucumber {
     position: absolute;
-    top: 0rem;
-    left: 63rem;
-    width: 8.5rem;
+    top: 0;
+    left: 630px;
+    width: 85px;
     z-index: -1;
   }
   &__pepper {
     position: absolute;
-    top: 40rem;
-    left: -2rem;
-    width: 8.6rem;
+    top: 400px;
+    left: -20px;
+    width: 86px;
     z-index: -1;
   }
-  &__peas {
+  &__bob01 {
     position: absolute;
-    bottom: 18.3rem;
-    left: -2rem;
-    width: 6.6rem;
+    bottom: 215px;
+    left: 0px;
+    width: 36px;
+    z-index: -1;
+  }
+  &__bob02 {
+    position: absolute;
+    bottom: 240px;
+    left: 40px;
+    width: 47px;
+    z-index: -1;
+  }
+  &__bob03 {
+    position: absolute;
+    bottom: 163px;
+    left: 20px;
+    width: 66px;
     z-index: -1;
   }
 }
@@ -245,6 +260,9 @@ body {
   &_size-s {
     font-size: 1.8rem;
   }
+  &_size-m {
+    font-size: 2.4rem;
+  }
 }
 .link {
   color: white;
@@ -257,4 +275,295 @@ body {
   letter-spacing: 0.13rem;
   border-radius: 3.8rem;
   display: inline-block;
+  &_max {
+    padding: 2.4rem 5.3rem;
+  }
+}
+.offer {
+  background-image: url(../images/offer.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 2rem;
+  padding-bottom: 12.8rem;
+  &__text {
+    margin-top: 6rem;
+    max-width: 700px;
+  }
+}
+.slider {
+  overflow: hidden;
+  padding-top: 9rem;
+}
+.swiper {
+  overflow: initial;
+  &-slide {
+    border: 1px solid rgba($green, 0.4);
+    border-radius: 2rem;
+    padding: 3rem 3.7rem 3.8rem;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    &_white {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding: 4rem 3.7rem;
+      height: 520px;
+      &:hover {
+        .swiper-slide__hover {
+          height: 230px;
+          opacity: 1;
+        }
+        &::after {
+          content: "";
+          background-color: rgba($white, 0.55);
+          width: calc(100% - 4px);
+          height: calc(100% - 4px);
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          border-radius: 2rem;
+          z-index: -1;
+        }
+      }
+    }
+    &:hover {
+      box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+    }
+    &_milk {
+      background-image: url(../images/offer/milk.png);
+    }
+    &_pasta {
+      background-image: url(../images/offer/pasta.png);
+    }
+    &_steaks {
+      background-image: url(../images/offer/steaks.png);
+    }
+    &__title {
+      font-family: $font-cormorant;
+      font-size: 3rem;
+      color: $green;
+      margin-bottom: 0;
+    }
+    &__description {
+      font-size: 1.8rem;
+      color: rgba($green, 0.7);
+      margin-top: 2rem;
+      margin-bottom: 0;
+      min-height: 55px;
+      max-width: 300px;
+      line-height: 1.5;
+    }
+    &__price {
+      font-size: 2.4rem;
+      margin-bottom: 3rem;
+    }
+    &__hover {
+      height: 0;
+      opacity: 0;
+    }
+    &__text {
+      color: rgba($green, 0.7);
+      line-height: 1.5;
+      margin-top: 2.5rem;
+      margin-bottom: 3.4rem;
+      max-width: 263px;
+    }
+    &__link {
+      text-transform: uppercase;
+      font-weight: 500;
+      text-decoration: none;
+      color: $green;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      letter-spacing: 0.1rem;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        background-image: url(../images/plus.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    &__cover {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 322px;
+      text-align: center;
+    }
+    &__image {
+      width: 100%;
+      height: 100%;
+      max-width: 350px;
+      object-fit: contain;
+    }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &-pagination {
+    display: none;
+  }
+  &-button-next,
+  &-button-prev {
+    top: -6rem;
+    &:hover {
+      &::after {
+        color: rgba($green, 1);
+      }
+    }
+    &::after {
+      color: rgba($green, 0.4);
+      font-size: 20px;
+    }
+  }
+  &-button-next {
+    right: -8px;
+  }
+  &-button-prev {
+    left: initial;
+    right: 73px;
+  }
+}
+.counter {
+  display: flex;
+  &__btn {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border: 1px solid $green;
+    background-color: transparent;
+    padding: 0;
+    background-position: center center;
+    border-radius: 100%;
+  }
+  &__minus {
+    pointer-events: none;
+    background-image: url(../images/minus-counter.svg);
+    background-size: 30px 13px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+  }
+  &__plus {
+    background-image: url(../images/plus-counter.svg);
+    background-size: 30px 13px;
+    background-repeat: no-repeat;
+  }
+  &__input {
+    text-align: center;
+    font-size: 2.4rem;
+    width: 46px;
+    border: none;
+    padding: 0;
+  }
+}
+.about {
+  padding-top: 40px;
+  padding-bottom: 100px;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6.5rem;
+  }
+  &__text {
+    margin-left: 12rem;
+    flex-basis: 620px;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 9rem;
+    font-family: $font-cormorant;
+    font-style: italic;
+    font-size: 3rem;
+    margin: 0;
+    padding-left: 0;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      content: "";
+      width: 84px;
+      height: 84px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: 1px solid rgba($green, 0.4);
+      border-radius: 100%;
+      margin-bottom: 1.5rem;
+    }
+    &:nth-child(1) {
+      &::before {
+        background-image: url(../images/unic/fruits.svg);
+        background-size: 44px 40px;
+      }
+    }
+    &:nth-child(2) {
+      &::before {
+        background-image: url(../images/unic/traditional.svg);
+        background-size: 44px 40px;
+      }
+    }
+    &:nth-child(3) {
+      &::before {
+        background-image: url(../images/unic/good.svg);
+        background-size: 44px 40px;
+      }
+    }
+  }
+}
+.trends {
+  padding-top: 95px;
+  padding-bottom: 100px;
+  &__text {
+    margin-top: 40px;
+  }
+}
+.catalog {
+  padding-top: 88px;
+  &__list {
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+  }
+}
+.category {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  &__item {
+    flex-basis: 230px;
+    text-align: center;
+  }
+  &__link {
+    padding: 2.4rem 0;
+    border: 1px solid rgba($green, 0.5);
+    color: rgba($green, 0.5);
+    font-size: 1.8rem;
+    text-decoration: none;
+    border-radius: 4rem;
+    display: block;
+    &:hover {
+      border: 1px solid $orange;
+      color: $orange;
+    }
+  }
 }
