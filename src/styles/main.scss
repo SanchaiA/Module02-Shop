@@ -278,6 +278,11 @@ body {
   &_max {
     padding: 2.4rem 5.3rem;
   }
+  &_min {
+    font-size: 1.4rem;
+    padding: 2rem 3.4rem;
+    box-shadow: 0px 1rem 1.1rem 0.17rem rgba(207, 92, 13, 0.15);
+  }
 }
 .offer {
   background-image: url(../images/offer.png);
@@ -449,6 +454,10 @@ body {
     padding: 0;
     background-position: center center;
     border-radius: 100%;
+    &_min {
+      width: 40px;
+      height: 40px;
+    }
   }
   &__minus {
     pointer-events: none;
@@ -469,6 +478,10 @@ body {
     width: 46px;
     border: none;
     padding: 0;
+    &_min {
+      width: 33px;
+      height: 33px;
+    }
   }
 }
 .about {
@@ -565,5 +578,58 @@ body {
       border: 1px solid $orange;
       color: $orange;
     }
+  }
+}
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  &__item {
+    border: 1px solid rgba($green, 0.4);
+    border-radius: 2rem;
+    padding: 2.7rem 3rem 3.8rem;
+    box-sizing: border-box;
+    &:hover {
+      box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+    }
+  }
+  &__cover {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 205px;
+    text-align: center;
+  }
+  &__image {
+    width: 100%;
+    max-width: 351px;
+    height: 100%;
+    object-fit: contain;
+  }
+  &__title {
+    font-family: $font-cormorant;
+    font-size: 3rem;
+    color: $green;
+    margin-top: 1.7rem;
+    margin-bottom: 0;
+  }
+  &__description {
+    font-size: 1.6rem;
+    color: rgba($green, 0.7);
+    margin-top: 1.8rem;
+    margin-bottom: 0;
+    min-height: 61px;
+    max-width: 250px;
+    line-height: 1.5;
+  }
+  &__price {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    margin-top: 0;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
